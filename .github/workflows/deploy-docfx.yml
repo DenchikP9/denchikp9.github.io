@@ -31,11 +31,11 @@ jobs:
       with:
         dotnet-version: 8.x
 
-    - run: dotnet tool update -g docfx
-    - run: docfx docfx/docfx.json
-
     - name: Restore NuGet packages  
       run: dotnet restore docfx/src/PlayerHUD/PlayerHUD.csproj
+
+    - run: dotnet tool update -g docfx
+    - run: docfx docfx/docfx.json
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
