@@ -3,10 +3,14 @@
   "metadata": [
     {
       "src": [
-        { "src": "src/PlayerHUD", "files": ["**/*.csproj"] }
+        {
+          "src": "src",
+          "files": [
+            "**/*.csproj"
+          ]
+        }
       ],
-      "dest": "api",
-      "disableGitFeatures": true
+      "dest": "api"
     }
   ],
   "build": {
