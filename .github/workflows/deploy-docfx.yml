@@ -32,6 +32,7 @@ jobs:
         dotnet-version: 8.x
 
     - run: dotnet tool update -g docfx
+    - run: dotnet restore docfx/src/PlayerHUD/PlayerHUD.csproj
     - run: docfx docfx/docfx.json
 
     - name: Upload artifact
